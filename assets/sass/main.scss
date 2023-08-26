@@ -375,6 +375,10 @@
     }
 
 /* Image */
+.resize {
+    width: 100px;
+    height: auto;
+}
 
     .image {
         border: 0;
@@ -416,6 +420,29 @@
             img {
                 display: block;
                 width: 100%;
+            }
+        }
+        &.solid {
+            &:before {
+                font-weight: 900;
+            }
+        }
+        &.logo {
+            text-align: center;
+            cursor: default;
+            background-color: red;
+            @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15))', 'url("images/bg01.png")'));
+            color: _palette(accent, fg);
+            border-radius: 100%;
+            display: inline-block;
+            width: 5em;
+            height: 5em;
+            line-height: 5em;
+            box-shadow: 0 0 0 7px black, 0 0 0 8px _palette(border);
+            margin: 0 0 2em 0;
+
+            &:before {
+                font-size: 36px;
             }
         }
     }
